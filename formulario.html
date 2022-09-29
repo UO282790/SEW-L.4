@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Typescript: ¿qué opinas?</title>
+
+    <meta name="author" content="Álvaro González Erigoyen, UO282790" />
+    <meta
+      name="description"
+      content="Registro de opiniones acerca de Typescript"
+    />
+    <meta name="keywords" content="typescript, opiniones, encuesta" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+  </head>
+
+  <body>
+    <h1>Typescript: ¿qué opinas tú?</h1>
+    <nav>
+      <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
+      <a href="tiposDeDatos.html" accesskey="T" tabindex="2">Tipos de datos</a>
+      <a href="typescriptVsJavascript.html" accesskey="J" tabindex="3">Typescript vs. Javascript</a>
+      <a href="formulario.html" accesskey="F" tabindex="4">Tu opinión</a>
+    </nav>
+    <h2>Encuesta personal sobre Typescript</h2>
+    <p>
+      ¿Qué opinas de Typescript? ¿Lo usas en tu trabajo? ¿Te parece más útil que
+      Javascript? Cuéntanos tus opiniones en la siguiente encuesa:
+    </p>
+    <form>
+      <fieldset>
+        <legend>Datos personales</legend>
+        <p>
+          <label for="name">Nombre: <input id="name" /></label>
+        </p>
+        <p>
+          <label for="email">Correo electrónico: <input id="email" type="email" /></label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Fidelidad</legend>
+        <p>
+          <label for="timeUsing">
+            ¿Desde cuándo llevas usando Typescript?
+            <input id="timeUsing" type="month"/>
+          </label>
+        </p>
+        <p>
+          <label for ="oneTen">
+            Del uno al diez, ¿cuánto lo recomiendas? <input id="oneTen" type="range"
+          /></label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Opinión personal </legend>
+        <p><label>¿Qué opinas de Typescript? <textarea></textarea></label></p>
+      </fieldset>
+      <fieldset>
+        <legend>¿Lo usarías otra vez? </legend>
+        <p>
+          <label>Sí<input type="radio" name="useAgain"/></label>
+          <label>No<input type="radio" name="useAgain"/></label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>¿Lo prefieres a Javascript? </legend>
+        <p>
+          <label>Sí<input type="radio" name="prefer"/></label>
+          <label>No<input type="radio" name="prefer"/></label>
+        </p>
+      </fieldset>
+      <p>
+        <label>Reiniciar <input type="reset" /></label>
+      </p>
+      <p><input type="submit" value="Enviar" /></p>
+    </form>
+
+    <footer>
+      <img src="multimedia/HTML5.png" alt="HTML5 válido!" />
+      <img src="multimedia/CSS3.png" alt="CSS3 válido!" />
+    </footer>
+  </body>
+</html>
