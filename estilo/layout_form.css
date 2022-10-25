@@ -1,0 +1,119 @@
+/* 
+Álvaro González Erigoyen - UO282790 - SEW.L-04
+
+Descripción de los layouts
+*/
+
+body {
+    display: grid;
+  
+    grid-template-areas: 
+    'header header header' 
+    'nav nav nav'
+    'aside article article ' 
+    'footer footer footer';
+  
+    gap: 0.5vw;
+  }
+  
+  @media (max-width: 600px) {
+      body {
+          display: grid;
+        
+          grid-template-areas: 
+          'header' 
+          'nav'
+          'aside'
+          'article' 
+          'footer';
+        
+          gap: 0.5vw;
+      }
+  }
+  
+  body h1 {
+    grid-area: header;
+  }
+  
+  body nav {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 750px) {
+    body nav{
+      flex-direction: column;
+    }
+  }
+  
+  body article {
+    grid-area: article;
+  }
+  
+  body aside {
+    grid-area: aside;
+  }
+  
+  body footer {
+    grid-area: footer;
+  }
+  
+  /* --- IMAGENES --- */
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  footer img {
+    display: unset;
+  }
+  
+  @media (max-width: 600px) {
+    footer img {
+      display: unset;
+    }
+  }
+
+/* --- FORMULARIO --- */
+form {
+  margin: 3ex;
+}
+
+form fieldset {
+  display:flex;
+  flex-direction: column;
+}
+
+form fieldset input{
+  width: 40ex;
+}
+
+form fieldset input[type = "email"]{
+  width: 40ex;
+}
+form fieldset input[type = "range"]{
+  width: 25ex;
+}
+form fieldset input[type = "radio"]{
+  width: 10ex;
+  margin-right: 5ex;
+}
+form fieldset textarea{
+  width: 80%;
+  height: 60ex;
+}
+form input[type = "reset"]{
+  font-size: larger;
+}
+form input[type = "submit"]{
+  font-size: larger;
+}
+form p:last-of-type {
+  text-align: center;
+  margin-top: 2ex;
+}
+form fieldset p:last-of-type {
+  text-align: justify;
+}
+

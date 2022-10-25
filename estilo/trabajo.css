@@ -1,22 +1,21 @@
 /* 
 Álvaro González Erigoyen - UO282790 - SEW.L-04
 
-Estilos generales de la web
+Estilos de elementos
 */
 
 /* --- GENERAL --- */
 /*Especificidad 1*/
 body {
   font-family: monospace;
-  font-size: 15pt;
+  font-size:2vh;
   background-color: rgb(216, 216, 216);
 }
 
 /*Especificidad 1*/
 p {
   background-color: rgb(216, 216, 216);
-  margin: 0.5ex;
-  text-align: justify;
+  margin-top: 0.5ex;
 }
 
 /*Especificidad 1*/
@@ -48,31 +47,15 @@ nav {
   border-style: solid;
   margin: 0.3ex;
   padding: 0.5ex;
+  text-align: end;
 }
 
 nav a {
-  background-color: rgb(147, 203, 251);
-  margin-right: 0.5ex;
-  padding: 0.2ex;
-  border: 0.1ex;
-  border-style: solid;
-}
-
-nav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  margin-right: 0.5ex;
-  padding: 0.2ex;
-  border: 0.1ex;
-  border-style: solid;
-}
-
-aside {
-  border: 0.1ex;
-  border-style: solid;
-}
-aside section {
-  border-style: hidden;
+    background-color: rgb(147, 203, 251);
+    margin-right: 0.5ex;
+    padding: 0.2ex;
+    border: 0.1ex;
+    border-style: solid;
 }
 
 /* --- FOOTER --- */
@@ -126,6 +109,12 @@ table tr td:last-child {
 }
 
 /*Especificidad 13*/
+/*
+table tr:first-child td {
+    color: rgb(188, 0, 0);
+    font-weight: bold;
+}
+*/
 table tr td:first-child {
   color: blue;
   font-weight: bold;
@@ -136,44 +125,10 @@ table tr td:first-child {
 /*Especificidad 11*/
 dd:hover {
   background-color: rgb(133, 198, 255);
+  display: grid;
 }
 
 /*Especificidad 1*/
 dt {
   font-weight: bold;
-}
-
-/* --- IMAGENES --- */
-img {
-  width: 15vw;
-  height: 15vw;
-}
-
-footer img {
-  width: 5vw;
-  height: 5vw;
-}
-
-@media (max-width: 600px) {
-  img {
-    width: 35vw;
-    height: 35vw;
-  }
-
-  footer img {    
-    width: 10vw;
-    height: 10vw;
-  }
-}
-
-/* --- VIDEO --- */
-video {
-  width: 60vw;
-  height: 35vw;
-}
-
-/* --- AUDIO --- */
-audio {
-  margin-top: 2ex;
-  width: 70vw;
 }

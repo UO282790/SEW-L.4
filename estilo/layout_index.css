@@ -1,0 +1,84 @@
+/* 
+Álvaro González Erigoyen - UO282790 - SEW.L-04
+
+Descripción de los layouts
+*/
+
+body {
+  display: grid;
+
+  grid-template-areas: 
+  'header header header' 
+  'nav nav nav'
+  'aside article article ' 
+  'footer footer footer';
+
+  gap: 0.5vw;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: grid;
+      
+        grid-template-areas: 
+        'header' 
+        'nav'
+        'aside'
+        'article' 
+        'footer';
+      
+        gap: 0.5vw;
+    }
+}
+
+body h1 {
+  grid-area: header;
+}
+
+body nav {
+  grid-area: nav;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 750px) {
+  body nav{
+    flex-direction: column;
+  }
+}
+
+body article {
+  grid-area: article;
+}
+
+body aside {
+  grid-area: aside;
+}
+
+body footer {
+  grid-area: footer;
+}
+
+/* --- IMAGENES --- */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer img {
+  display: unset;
+}
+
+@media (max-width: 600px) {
+  footer img {
+    display: unset;
+  }
+}
+
+/* --- VIDEO --- */
+section:nth-child(4) p:last-child{
+  text-align: center;
+}
+
+
+
