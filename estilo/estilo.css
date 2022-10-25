@@ -142,7 +142,7 @@ table td {
 
 /*Especificidad 13*/
 table tr td:last-child {
-  color: red;
+  color: #800000;
   font-weight: bold;
 }
 
