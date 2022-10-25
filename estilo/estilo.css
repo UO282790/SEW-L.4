@@ -49,6 +49,10 @@ h3 {
   margin-top: 0.3ex;
   margin-bottom: 0.3ex;
 }
+a{
+  color:#003870;
+}
+
 
 /* --- NAVEGACIÓN --- */
 /*Especificidad 1*/
@@ -61,7 +65,6 @@ nav {
 }
 
 nav a {
-  color:#003870;
   background-color: rgb(147, 203, 251);
   margin-right: 0.5ex;
   padding: 0.2ex;
@@ -84,9 +87,6 @@ aside {
 }
 aside section {
   border-style: hidden;
-}
-aside a{
-  color:#003870;
 }
 
 /* --- FOOTER --- */
