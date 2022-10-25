@@ -7,28 +7,28 @@ Descripción de los layouts
 body {
   display: grid;
 
-  grid-template-areas: 
-  'header header header' 
-  'nav nav nav'
-  'aside article article ' 
-  'footer footer footer';
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside article article "
+    "footer footer footer";
 
   gap: 0.5vw;
 }
 
 @media (max-width: 600px) {
-    body {
-        display: grid;
-      
-        grid-template-areas: 
-        'header' 
-        'nav'
-        'aside'
-        'article' 
-        'footer';
-      
-        gap: 0.5vw;
-    }
+  body {
+    display: grid;
+
+    grid-template-areas:
+      "header"
+      "nav"
+      "aside"
+      "article"
+      "footer";
+
+    gap: 0.5vw;
+  }
 }
 
 body h1 {
@@ -41,7 +41,7 @@ body nav {
   flex-wrap: wrap;
 }
 @media (max-width: 750px) {
-  body nav{
+  body nav {
     flex-direction: column;
   }
 }
@@ -59,26 +59,11 @@ body footer {
 }
 
 /* --- IMAGENES --- */
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer img {
-  display: unset;
-}
-
-@media (max-width: 600px) {
-  footer img {
-    display: unset;
-  }
-}
-
-/* --- VIDEO --- */
-section:nth-child(4) p:last-child{
+footer p {
   text-align: center;
 }
 
-
-
+/* --- VIDEO --- */
+section:nth-child(4) p:last-child {
+  text-align: center;
+}
