@@ -61,6 +61,7 @@ nav {
 }
 
 nav a {
+  color:black;
   background-color: rgb(147, 203, 251);
   margin-right: 0.5ex;
   padding: 0.2ex;

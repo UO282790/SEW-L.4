@@ -69,10 +69,6 @@ p:nth-of-type(2){
   text-align: center;
 }
 
-img {
-  size: 15%;
-}
-
 /* --- TABLAS --- */
 article section:last-of-type {
   text-align: center;
