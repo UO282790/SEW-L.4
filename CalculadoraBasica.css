@@ -1,0 +1,125 @@
+/* LAYOUT */
+body {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+
+section {
+    display: grid;
+    grid-template-areas: 
+    "screen screen screen screen"
+    "clr masmenos sqrt perc"
+    "_7 _8 _9 mas"
+    "_4 _5 _6 menos"
+    "_1 _2 _3 div"
+    "_0 dec eq mul";
+
+    gap: 0.5vw;
+    padding: 1vw;
+
+    border-style: solid;
+
+    height: 85vh;
+}
+
+section input {    
+    font-size: 5vh;
+}
+
+section input[type = text]{
+    grid-area: screen;
+    background-color: rgb(173, 245, 151);
+}
+
+section input[value = "9"]{
+    grid-area: _9;
+}
+
+section input[value = "8"]{
+    grid-area: _8;
+}
+
+section input[value = "7"]{
+    grid-area: _7;
+}
+
+section input[value = "6"]{
+    grid-area: _6;
+}
+
+section input[value = "5"]{
+    grid-area: _5;
+}
+
+section input[value = "4"]{
+    grid-area: _4;
+}
+
+section input[value = "3"]{
+    grid-area: _3;
+}
+
+section input[value = "2"]{
+    grid-area: _2;
+}
+
+section input[value = "1"]{
+    grid-area: _1;
+}
+
+section input[value = "0"]{
+    grid-area: _0;
+}
+
+section input[value = "+"]{
+    grid-area: mas;
+    background-color: gray;
+}
+
+section input[value = "-"]{
+    grid-area: menos;
+    background-color: gray;
+}
+
+section input[value = "/"]{
+    grid-area: div;
+    background-color: gray;
+}
+
+section input[value = "*"]{
+    grid-area: mul;
+    background-color: gray;
+}
+
+section input[value = "="]{
+    grid-area: eq;
+    background-color: gray;
+}
+
+section input[value = "."]{
+    grid-area: dec;
+    background-color: gray;
+}
+
+section input[value = "sqrt"]{
+    grid-area: sqrt;
+    background-color: gray;
+}
+
+section input[value = "%"]{
+    grid-area: perc;
+    background-color: gray;
+}
+
+section input[value = "CE"]{
+    grid-area: clr;
+    background-color: gray;
+}
+
+section input[value = "+/-"]{
+    grid-area: masmenos;
+    background-color: gray;
+}
