@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CalculadoraRPN.css" />
+    <script src="CalculadoraRPN.js"></script>
+
+    <title>Calculadora RPN</title>
+  </head>
+  <body>
+    <h1>Calculadora RPN</h1>
+    <section>
+      <label for="screen" hidden="true">Label</label>
+      <label for="stack" hidden="true">Label</label>
+      <textarea rows="5" name="stack" id="screen" lang="es" disabled></textarea>
+      <input id="screen" type="text" readonly value="" />
+
+      <input type="button" value="9" onclick="calc().digitos(9)" />
+      <input type="button" value="8" onclick="calc().digitos(8)" />
+      <input type="button" value="7" onclick="calc().digitos(7)" />
+      <input type="button" value="6" onclick="calc().digitos(6)" />
+      <input type="button" value="5" onclick="calc().digitos(5)" />
+      <input type="button" value="4" onclick="calc().digitos(4)" />
+      <input type="button" value="3" onclick="calc().digitos(3)" />
+      <input type="button" value="2" onclick="calc().digitos(2)" />
+      <input type="button" value="1" onclick="calc().digitos(1)" />
+      <input type="button" value="0" onclick="calc().digitos(0)" />
+
+      <!-- Basic functions -->
+      <input type="button" value="." onclick="calc().punto()" />
+      <input type="button" value="Enter" onclick="calc().enter()" />
+
+      <input type="button" value="√" onclick="calc().sqrt()" />
+      <input type="button" value="*" onclick="calc().multi()" />
+      <input type="button" value="/" onclick="calc().div()" />
+      <input type="button" value="-" onclick="calc().resta()" />
+      <input type="button" value="+" onclick="calc().suma()" />
+
+      <input type="button" value="CE" onclick="calc().clr()" />
+
+      <!-- Extra functions -->
+      <input type="button" value="π" onclick="calc().pi()" />
+      <input type="button" value="x^2" onclick="calc().power2();" />
+      <input type="button" value="x^y" onclick="calc().powerY();" />
+      <input type="button" value="sin" onclick="calc().sin();" />
+      <input type="button" value="cos" onclick="calc().cos();" />
+      <input type="button" value="tan" onclick="calc().tan();" />
+      <input type="button" value="arcsin" onclick="calc().arcsin();" />
+      <input type="button" value="arccos" onclick="calc().arccos();" />
+      <input type="button" value="arctan" onclick="calc().arctan();" />
+      <input type="button" value="10^x" onclick="calc().power10();" />
+      <input type="button" value="log" onclick="calc().log10();" />
+      <input type="button" value="exp" onclick="calc().exponente();" />
+      <input type="button" value="mod" onclick="calc().modulo();" />
+    </section>
+    <footer>
+      <img src="multimedia/HTML5.png" alt="HTML5 válido!" />
+      <img src="multimedia/CSS3.png" alt="CSS3 válido!" />
+    </footer>
+  </body>
+</html>
