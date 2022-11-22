@@ -1,125 +1,158 @@
 /* LAYOUT */
 body {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 15vw;
-    margin-right: 15vw;
-}
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
 
+  font-family: monospace;
+}
 
 section {
-    display: grid;
-    grid-template-areas: 
-    "screen screen screen screen"
-    "clr masmenos sqrt perc"
-    "_7 _8 _9 mas"
-    "_4 _5 _6 menos"
-    "_1 _2 _3 div"
-    "_0 dec eq mul";
+  display: grid;
+  grid-template-areas:
+    "tit tit tit tit tit"
+    "screen screen screen screen screen"
+    "on clr masmenos sqrt perc"
+    "_7 _8 _9 mul div"
+    "_4 _5 _6 menos mrc"
+    "_1 _2 _3 mas mmenos"
+    "_0 dec eq mas mmas";
 
-    gap: 0.5vw;
-    padding: 1vw;
+  gap: 0.5vw;
+  padding: 1vw;
 
-    border-style: solid;
+  border-style: solid;
 
-    height: 85vh;
+  height: 85vh;
 }
 
-section input {    
-    font-size: 5vh;
+section h1 {
+  grid-area: tit;
+  text-align: center;
+  font-size: 8vh;
+  margin: 1vh;
 }
 
-section input[type = text]{
-    grid-area: screen;
-    background-color: rgb(173, 245, 151);
+section input {
+  font-size: 5vh;
 }
 
-section input[value = "9"]{
-    grid-area: _9;
+section input[type="text"] {
+  grid-area: screen;
+  text-align: right;
+  background-color: rgb(173, 245, 151);
+  padding-right: 5px;
 }
 
-section input[value = "8"]{
-    grid-area: _8;
+section input[type="button"][value="9"] {
+  grid-area: _9;
 }
 
-section input[value = "7"]{
-    grid-area: _7;
+section input[type="button"][value="8"] {
+  grid-area: _8;
 }
 
-section input[value = "6"]{
-    grid-area: _6;
+section input[type="button"][value="7"] {
+  grid-area: _7;
 }
 
-section input[value = "5"]{
-    grid-area: _5;
+section input[type="button"][value="6"] {
+  grid-area: _6;
 }
 
-section input[value = "4"]{
-    grid-area: _4;
+section input[type="button"][value="5"] {
+  grid-area: _5;
 }
 
-section input[value = "3"]{
-    grid-area: _3;
+section input[type="button"][value="4"] {
+  grid-area: _4;
 }
 
-section input[value = "2"]{
-    grid-area: _2;
+section input[type="button"][value="3"] {
+  grid-area: _3;
 }
 
-section input[value = "1"]{
-    grid-area: _1;
+section input[type="button"][value="2"] {
+  grid-area: _2;
 }
 
-section input[value = "0"]{
-    grid-area: _0;
+section input[type="button"][value="1"] {
+  grid-area: _1;
 }
 
-section input[value = "+"]{
-    grid-area: mas;
-    background-color: gray;
+section input[type="button"][value="0"] {
+  grid-area: _0;
 }
 
-section input[value = "-"]{
-    grid-area: menos;
-    background-color: gray;
+section input[type="button"][value="."] {
+  grid-area: dec;
+}
+section input[type="button"][value="="] {
+  grid-area: eq;
 }
 
-section input[value = "/"]{
-    grid-area: div;
-    background-color: gray;
+section input[type="button"][value="+"] {
+  grid-area: mas;
+  background-color: gray;
 }
 
-section input[value = "*"]{
-    grid-area: mul;
-    background-color: gray;
+section input[type="button"][value="-"] {
+  grid-area: menos;
+  background-color: gray;
 }
 
-section input[value = "="]{
-    grid-area: eq;
-    background-color: gray;
+section input[type="button"][value="/"] {
+  grid-area: div;
+  background-color: gray;
 }
 
-section input[value = "."]{
-    grid-area: dec;
-    background-color: gray;
+section input[type="button"][value="*"] {
+  grid-area: mul;
+  background-color: gray;
 }
 
-section input[value = "sqrt"]{
-    grid-area: sqrt;
-    background-color: gray;
+section input[type="button"][value="sqrt"] {
+  grid-area: sqrt;
+  background-color: gray;
+  border-radius: 10vh;
 }
 
-section input[value = "%"]{
-    grid-area: perc;
-    background-color: gray;
+section input[type="button"][value="%"] {
+  grid-area: perc;
+  background-color: gray;
+  border-radius: 10vh;
 }
 
-section input[value = "CE"]{
-    grid-area: clr;
-    background-color: gray;
+section input[type="button"][value="CE"] {
+  grid-area: clr;
+  background-color: gray;
+  border-radius: 10vh;
 }
 
-section input[value = "+/-"]{
-    grid-area: masmenos;
-    background-color: gray;
+section input[type="button"][value="+/-"] {
+  grid-area: masmenos;
+  background-color: gray;
+  border-radius: 10vh;
+}
+
+section input[type="button"][value="ON/C"] {
+  grid-area: on;
+  background-color: gray;
+  border-radius: 10vh;
+}
+
+section input[type="button"][value="Mrc"] {
+  grid-area: mrc;
+  background-color: gray;
+}
+
+section input[type="button"][value="M-"] {
+  grid-area: mmenos;
+  background-color: gray;
+}
+
+section input[type="button"][value="M+"] {
+  grid-area: mmas;
+  background-color: gray;
 }
