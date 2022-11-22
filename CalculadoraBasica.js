@@ -10,6 +10,58 @@ class Calculadora {
     this.pantalla = " 0";
 
     this.M = "";
+
+    this.asginaTeclado();
+  }
+
+  refresh() {
+    document
+      .querySelector("section input[type=text]")
+      .setAttribute("value", this.pantalla + "");
+  }
+
+  asginaTeclado() {
+    // Funciones de teclado
+    document.addEventListener("keydown", (event) => {
+      const keyName = event.key;
+      switch (keyName) {
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+          calc().digitos(parseInt(keyName));
+          break;
+        case "+":
+          calc().suma();
+          break;
+        case "-":
+          calc().resta();
+          break;
+        case "*":
+          calc().multi();
+          break;
+        case "/":
+          calc().div();
+          break;
+        case ".":
+          calc().punto();
+          break;
+        case "Backspace":
+          calc().clr();
+          break;
+        case "Enter":
+          calc().igual();
+          break;
+        default:
+        //alert("Pulsado :" + keyName);
+      }
+    });
   }
 
   on() {
@@ -180,18 +232,20 @@ class Calculadora {
 
   igual() {
     // Cálculo
-    var evaluated = Number(eval(this.pantalla));
+    try {
+      var evaluated = Number(eval(this.pantalla));
 
-    // Lógica
-    this.operando1 = evaluated + "";
-    this.operando2 = "";
-    this.operador = "";
-    this.pantalla = " " + evaluated;
+      // Lógica
+      this.operando1 = evaluated + "";
+      this.operando2 = "";
+      this.operador = "";
+      this.pantalla = " " + evaluated;
 
-    // Presentación
-    document
-      .querySelector("section input[type=text]")
-      .setAttribute("value", this.pantalla + "");
+      // Presentación
+      document
+        .querySelector("section input[type=text]")
+        .setAttribute("value", this.pantalla + "");
+    } catch (error){}
   }
 
   porciento() {
@@ -242,53 +296,3 @@ class Calculadora {
     }
   }
 }
-
-//------------------------------------------------------------
-("use strict");
-var calcu = new Calculadora();
-
-function calc() {
-  return calcu;
-}
-
-// Funciones de teclado
-document.addEventListener("keydown", (event) => {
-  const keyName = event.key;
-  switch (keyName) {
-    case "0":
-    case "1":
-    case "2":
-    case "3":
-    case "4":
-    case "5":
-    case "6":
-    case "7":
-    case "8":
-    case "9":
-      calc().digitos(parseInt(keyName));
-      break;
-    case "+":
-      calc().suma();
-      break;
-    case "-":
-      calc().resta();
-      break;
-    case "*":
-      calc().multi();
-      break;
-    case "/":
-      calc().div();
-      break;
-    case ".":
-      calc().punto();
-      break;
-    case "Backspace":
-      calc().clr();
-      break;
-    case "Enter":
-      calc().igual();
-      break;
-    default:
-    //alert("Pulsado :" + keyName);
-  }
-});
