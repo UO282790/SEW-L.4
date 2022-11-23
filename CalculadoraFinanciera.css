@@ -1,0 +1,319 @@
+/* LAYOUT */
+body {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+
+  font-family: monospace;
+}
+
+body article{
+  font-size: 2vh;
+}
+
+body h1{
+  text-align: center;
+  font-size: 4vh;
+}
+
+footer {
+  margin-top: 4vh;
+  text-align: center;
+}
+
+section {
+  display: grid;
+  grid-template-areas:
+    "stack stack stack stack "
+    "screen screen screen screen "
+    "iSimple iSimple iComp iComp"
+    "sin cos _tan pow2"
+    "arcsin arccos arctan powY"
+    "sqrt log exp power10"
+    "clr pi mod div"
+    "_7 _8 _9 mul"
+    "_4 _5 _6 menos"
+    "_1 _2 _3 mas"
+    "dec _0 enter enter";
+
+  gap: 0.5vw;
+  padding: 1vw;
+
+  border-style: solid;
+
+  height: 98vh;
+}
+
+section h1 {
+  grid-area: tit;
+  text-align: center;
+  font-size: 8vh;
+  margin: 1vh;
+}
+
+section input {
+  font-size: 3.5vh;
+}
+
+section input[type="text"] {
+  grid-area: screen;
+  text-align: right;
+  background-color: rgb(173, 245, 151);
+  padding-right: 5px;
+  font-size: 5vh;
+}
+
+section textarea {
+  grid-area: stack;
+  text-align: right;
+  vertical-align: bottom;
+  background-color: rgb(173, 245, 151);
+  padding-right: 5px;
+  font-size: 3.5vh;
+  height: 35vh;
+}
+
+section p {
+  grid-area: ph;
+}
+
+section input[type="button"][value="9"] {
+  grid-area: _9;
+}
+
+section input[type="button"][value="8"] {
+  grid-area: _8;
+}
+
+section input[type="button"][value="7"] {
+  grid-area: _7;
+}
+
+section input[type="button"][value="6"] {
+  grid-area: _6;
+}
+
+section input[type="button"][value="5"] {
+  grid-area: _5;
+}
+
+section input[type="button"][value="4"] {
+  grid-area: _4;
+}
+
+section input[type="button"][value="3"] {
+  grid-area: _3;
+}
+
+section input[type="button"][value="2"] {
+  grid-area: _2;
+}
+
+section input[type="button"][value="1"] {
+  grid-area: _1;
+}
+
+section input[type="button"][value="0"] {
+  grid-area: _0;
+}
+
+section input[type="button"][value="."] {
+  grid-area: dec;
+}
+section input[type="button"][value="Enter"] {
+  grid-area: enter;
+}
+
+section input[type="button"][value="+"] {
+  grid-area: mas;
+  background-color: gray;
+}
+
+section input[type="button"][value="-"] {
+  grid-area: menos;
+  background-color: gray;
+}
+
+section input[type="button"][value="/"] {
+  grid-area: div;
+  background-color: gray;
+}
+
+section input[type="button"][value="*"] {
+  grid-area: mul;
+  background-color: gray;
+}
+
+section input[type="button"][value="√"] {
+  grid-area: sqrt;
+  background-color: gray;
+}
+
+section input[type="button"][value="%"] {
+  grid-area: perc;
+  background-color: gray;
+}
+
+section input[type="button"][value="CE"] {
+  grid-area: clr;
+  background-color: gray;
+}
+
+section input[type="button"][value="+/-"] {
+  grid-area: masMenos;
+  background-color: gray;
+}
+
+section input[type="button"][value="ON/C"] {
+  grid-area: on;
+  background-color: gray;
+  border-radius: 10vh;
+}
+
+section input[type="button"][value="Ms"] {
+  grid-area: ms;
+  background-color: gray;
+}
+
+section input[type="button"][value="Mc"] {
+  grid-area: mc;
+  background-color: gray;
+}
+
+section input[type="button"][value="Mr"] {
+  grid-area: mr;
+  background-color: gray;
+}
+
+section input[type="button"][value="M-"] {
+  grid-area: mMenos;
+  background-color: gray;
+}
+
+section input[type="button"][value="M+"] {
+  grid-area: mMas;
+  background-color: gray;
+}
+
+section input[type="button"][value="π"] {
+  grid-area: pi;
+  background-color: gray;
+}
+
+section input[type="button"][value="DEG"],
+section input[type="button"][value="RAD"],
+section input[type="button"][value="GRAD"] {
+  grid-area: deg;
+  background-color: gray;
+}
+
+section input[type="button"][value="HYP"] {
+  grid-area: hyp;
+  background-color: gray;
+}
+
+section input[type="button"][value="F-E"] {
+  grid-area: f-e;
+  background-color: gray;
+}
+
+section input[type="button"][value="x^2"] {
+  grid-area: pow2;
+  background-color: gray;
+}
+
+section input[type="button"][value="x^y"] {
+  grid-area: powY;
+  background-color: gray;
+}
+
+section input[type="button"][value="sin"] {
+  grid-area: sin;
+  background-color: gray;
+}
+
+section input[type="button"][value="arcsin"] {
+  grid-area: arcsin;
+  background-color: gray;
+}
+
+section input[type="button"][value="cos"] {
+  grid-area: cos;
+  background-color: gray;
+}
+
+section input[type="button"][value="arccos"] {
+  grid-area: arccos;
+  background-color: gray;
+}
+
+section input[type="button"][value="tan"] {
+  grid-area: _tan;
+  background-color: gray;
+}
+
+section input[type="button"][value="arctan"] {
+  grid-area: arctan;
+  background-color: gray;
+}
+
+section input[type="button"][value="10^x"] {
+  grid-area: power10;
+  background-color: gray;
+}
+
+section input[type="button"][value="log"] {
+  grid-area: log;
+  background-color: gray;
+}
+
+section input[type="button"][value="exp"] {
+  grid-area: exp;
+  background-color: gray;
+}
+
+section input[type="button"][value="mod"] {
+  grid-area: mod;
+  background-color: gray;
+}
+
+section input[type="button"][value="↑"] {
+  grid-area: shift;
+  background-color: gray;
+}
+
+section input[type="button"][value="C"] {
+  grid-area: c;
+  background-color: gray;
+}
+
+section input[type="button"][value="DEL"] {
+  grid-area: back;
+  background-color: gray;
+}
+
+section input[type="button"][value="n!"] {
+  grid-area: fact;
+  background-color: gray;
+}
+
+section input[type="button"][value="("] {
+  grid-area: pOpen;
+  background-color: gray;
+}
+
+section input[type="button"][value=")"] {
+  grid-area: pClose;
+  background-color: gray;
+}
+
+section input[type="button"][value="I.Simple"] {
+  grid-area: iSimple;
+  background-color: rgb(180, 96, 96);
+}
+
+section input[type="button"][value="I.Comp"] {
+  grid-area: iComp;
+  background-color: rgb(180, 96, 96);
+}
